@@ -30,6 +30,8 @@ public class Contactos {
                 demo.MostrarContacto();
                 break;
 
+            case "3" :
+                demo.BuscarContacto();
         }
 
 
@@ -57,7 +59,30 @@ public class Contactos {
     }
 
     public void MostrarContacto(){
-        TreeMap<String, Integer> contacto = new TreeMap<>();
+        TreeMap<String, String> contacto = new TreeMap<>();
+        contacto.put("Francisco Garcia", "60777057");
+        contacto.put("Samy Cruz", "67841548");
+        contacto.put("Astrid Murgas", "96385274");
+        contacto.put("Mauricio Castro", "12345678");
+        System.out.println(contacto);
+
+
+    }
+
+    public void BuscarContacto(){
+        Scanner scan = new Scanner(System.in);
+
+        Set<String> contactos = new HashSet<>();
+        contactos.add("Francisco Garcia");
+        contactos.add("Samy Cruz");
+        contactos.add("Astrid Murgas");
+        contactos.add("Mauricio Castro");
+        System.out.println("Ingresa el Correo del contacto");
+        String nombreConatcto = scan.nextLine();
+        Set<String> contacto = new HashSet<>();
+        contacto.add (nombreConatcto);
+        System.out.println("El contacto ");
+
 
     }
 }
